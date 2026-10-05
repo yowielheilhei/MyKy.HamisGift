@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy 21st Monthsary, Kyla</title>
+    
+    <!-- Load Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Montserrat font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #fdf2f8; /* Soft pink background */
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            overflow-x: hidden;
+            /* Prevent bounce on mobile */
+            overscroll-behavior-y: none; 
+            position: relative;
+            min-height: 100vh;
+            color: #374151; /* Dark gray text for readability */
+        }
+
+        /* Animated Background Orbs for depth */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            animation: float 12s infinite ease-in-out alternate;
+            opacity: 0.7;
+        }
+
+        .orb-1 {
+            width: 70vw;
+            height: 70vw;
+            max-width: 500px;
+            max-height: 500px;
+            background: linear-gradient(135deg, #fbcfe8, #f472b6); /* Tailwind pink-200 to pink-400 */
+            top: -10%;
+            left: -15%;
+        }
+
+        .orb-2 {
+            width: 80vw;
+            height: 80vw;
+            max-width: 600px;
+            max-height: 600px;
+            background: linear-gradient(135deg, #fce7f3, #f9a8d4); /* Tailwind pink-100 to pink-300 */
+            bottom: -20%;
+            right: -20%;
+            animation-delay: -4s;
+            animation-duration: 15s;
+        }
+
+        .orb-3 {
+            width: 50vw;
+            height: 50vw;
+            max-width: 350px;
+            max-height: 350px;
+            background: linear-gradient(135deg, #fda4af, #fb7185); /* Tailwind rose-300 to rose-400 */
+            top: 40%;
+            left: 60%;
+            animation-delay: -8s;
+            animation-duration: 10s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(20px, 30px) scale(1.05); }
+            100% { transform: translate(-20px, 15px) scale(0.95); }
+        }
+
+        /* Glassmorphism Card Styling */
+        .glass-container {
+            /* Fallback background */
+            background: rgba(255, 255, 255, 0.45);
+            /* Frost effect */
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            /* Subtle white border for edge highlight */
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            /* Soft shadow */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        /* Animation classes for paragraph fade-in */
+        .fade-element {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .fade-element.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom scrollbar for webkit (if content overflows vertically on very small screens) */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(244, 114, 182, 0.3);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-pink-200 selection:text-pink-900">
+
+    <!-- Decorative background blobs -->
+    <div class="orb orb-1 pointer-events-none"></div>
+    <div class="orb orb-2 pointer-events-none"></div>
+    <div class="orb orb-3 pointer-events-none"></div>
+
+    <!-- Main content wrapper ensuring center alignment and padding -->
+    <main class="min-h-screen w-full flex items-center justify-center p-5 sm:p-8">
+        
+        <!-- The Glassmorphism Card -->
+        <article class="glass-container w-full max-w-lg rounded-[2rem] p-8 sm:p-10 lg:p-12 relative overflow-hidden">
+            
+            <!-- Subtle internal gradient overlay for extra depth -->
+            <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent pointer-events-none"></div>
+            
+            <div class="relative z-10">
+                <h1 class="fade-element text-3xl font-semibold text-pink-700 mb-8 tracking-tight">
+                    To My Honey,
+                </h1>
+                
+                <div class="space-y-5 text-[15px] sm:text-base leading-relaxed font-light">
+                    <p class="fade-element">
+                        Maybe I am not the man that you deserve. Ginagawa ko pa rin po magbago para po sa 'yo. Maraming tampuhan, maraming mga away, maraming masasakit na salita mga nabitawan natin.
+                    </p>
+                    
+                    <p class="fade-element">
+                        Sa kabila ng lahat, hindi mo pa rin ako iniwan. Sa ano mang pagkakataon, nandito ka pa rin sa tabi ko; hindi mo 'ko iniwan. Mahal kita, hon. Mahal kita, hon, more than anything. Hon, kahit na anong mangyari, ikaw pa rin po.
+                    </p>
+                    
+                    <p class="fade-element">
+                        I love you so much, honey. Naging duwag po ako sa lahat; handa pa rin harapin po lahat ng mga consequences. Sana hindi pa rin po magbago po pagmamahal mo po sa akin, honey.
+                    </p>
+                    
+                    <p class="fade-element">
+                        Sorry po ulit sa lahat-lahat—sa mga salitang nasabi ko, sa mga bagay na nagawa ko. I am really sorry, I am.
+                    </p>
+                    
+                    <p class="fade-element">
+                        Still, mahal na mahal ko po ikaw. Mahal na mahal kita na mahal kita. Mag-iingat ka po palagi. Magkikita pa po tayo sa December; iipon din po ako. I love you, honey. Love ko po ikaw palagi.
+                    </p>
+                    
+                    <p class="fade-element font-medium text-pink-800 mt-8 pt-4 border-t border-pink-200/50">
+                        Happy monthsary, honey. Happy 21 months, honey! Hindi madali, pero kaya natin 'to. I love you. Mapatawad mo sana ako.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Select all elements that need to fade in
+            const elements = document.querySelectorAll('.fade-element');
+            
+            // Apply a staggered delay to each element's appearance
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('is-visible');
+                }, 150 + (index * 250)); // Base delay of 150ms, plus 250ms per paragraph
+            });
+        });
+    </script>
+</body>
+</html>
